@@ -66,6 +66,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-1px;margin:8p
 .step p{margin:0;color:#c9d8e2}
 .framework{background:#f7fafc}
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.flowitem:last-child{grid-column:span 2}
 .flowitem{background:#fff;border:1px solid var(--line);border-radius:13px;padding:20px;text-align:center;font-weight:900}
 .flowitem span{display:block;font-size:28px}
 
@@ -93,13 +94,13 @@ footer strong{color:#fff}
   .photoarea{min-height:500px;padding:20px 0 55px}
   .photo-frame{height:500px}
   .cards{grid-template-columns:1fr 1fr}
-  .flow{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}.flowitem:last-child{grid-column:span 1}
   .about{max-width:700px}
 }
 @media(max-width:600px){
   .navlinks a:not(.navcta){display:none}
   .hero h1{letter-spacing:-1.8px}
-  .cards,.flow{grid-template-columns:1fr}
+  .cards,.flow{grid-template-columns:1fr}.flowitem:last-child{grid-column:span 1}
   .photoarea{min-height:410px}
   .photo-frame{height:auto;max-height:none;border-radius:22px}
   .about-photo-frame{height:420px}
@@ -188,16 +189,19 @@ footer strong{color:#fff}
   </div>
 </section>
 
-<section class="framework">
+<section class="framework" id="scope">
   <div class="c center">
-    <div class="eyed">ASK FA DENVER FRAMEWORK</div>
+    <div class="eyed">ASK FA DENVER GOALS &amp; SCOPE</div>
     <h2>Build Your Financial Safety Net</h2>
-    <p class="lead">Different tools can serve different purposes. Start with the foundation, then build around your goals.</p>
+    <p class="lead">Explore the areas that can help you understand, prepare for, and strengthen your financial protection.</p>
     <div class="flow">
-      <div class="flowitem"><span>🏥</span>PhilHealth</div>
       <div class="flowitem"><span>🩺</span>HMO</div>
-      <div class="flowitem"><span>💵</span>Emergency Fund</div>
-      <div class="flowitem"><span>🛡️</span>Insurance & Investments</div>
+      <div class="flowitem"><span>🛡️</span>Life Insurance</div>
+      <div class="flowitem"><span>🏥</span>Health Insurance</div>
+      <div class="flowitem"><span>❤️</span>Critical Illness</div>
+      <div class="flowitem"><span>💵</span>Savings &amp; Emergency Fund</div>
+      <div class="flowitem"><span>📈</span>Investment / VUL</div>
+      <div class="flowitem"><span>🕊️</span>Pre-Need Plan / St. Peter Life Plans</div>
     </div>
   </div>
 </section>
