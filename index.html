@@ -78,6 +78,13 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-1px;margin:8p
 .social{display:inline-flex;align-items:center;gap:7px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;color:var(--navy);font-weight:900;font-size:13px;background:#fff}
 .social:hover{border-color:var(--gold2);transform:translateY(-1px)}
 .social svg{width:19px;height:19px;display:block;fill:currentColor;flex:0 0 auto}
+
+.facebook-section{background:#f7fafc}
+.fb-wrap{max-width:820px;margin:28px auto 0;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 10px 30px #123b5d10;overflow:hidden}
+.fb-wrap .fb-page{width:100%}
+.fb-fallback{padding:18px;text-align:center;color:var(--muted)}
+.fb-fallback a{color:var(--navy);font-weight:900}
+
 .faq{max-width:850px}
 .faq details{border-bottom:1px solid var(--line);padding:17px 0}
 .faq summary{font-weight:900;cursor:pointer}
@@ -115,7 +122,7 @@ footer strong{color:#fff}
   <div class="c nav">
     <div class="logo">ASK FA <b>DENVER</b></div>
     <div class="navlinks">
-      <a href="#about">ABOUT</a>
+      <a href="#facebook">FACEBOOK</a><a href="#about">ABOUT</a>
       <a href="#connect">CONNECT</a>
       <a class="navcta" href="#register">FREE GUIDE</a>
     </div>
@@ -206,6 +213,35 @@ footer strong{color:#fff}
   </div>
 </section>
 
+
+<section class="facebook-section" id="facebook">
+  <div class="c center">
+    <div class="eyed">LATEST FROM ASK FA DENVER</div>
+    <h2>Financial Tips &amp; Updates</h2>
+    <p class="lead">Stay updated with the latest financial education, protection tips, and Ask FA Denver posts.</p>
+
+    <div class="fb-wrap">
+      <div class="fb-page"
+           data-href="https://www.facebook.com/askFAdenver/"
+           data-tabs="timeline"
+           data-width="820"
+           data-height="650"
+           data-small-header="false"
+           data-adapt-container-width="true"
+           data-hide-cover="false"
+           data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/askFAdenver/" class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/askFAdenver/" target="_blank" rel="noopener">Ask FA Denver on Facebook</a>
+        </blockquote>
+      </div>
+      <div class="fb-fallback">
+        If the Facebook feed is unavailable in your browser,
+        <a href="https://www.facebook.com/askFAdenver/" target="_blank" rel="noopener">view Ask FA Denver on Facebook →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="about">
   <div class="c about">
     <div class="about-photo-frame">
@@ -270,6 +306,10 @@ footer strong{color:#fff}
     This website is for educational and lead-generation purposes. It is not an official website of Sun Life Financial. Product availability, benefits, guarantees and policy terms are subject to the applicable insurer's official documents, underwriting and terms.
   </div>
 </footer>
+
+
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v24.0"></script>
 
 </body>
 </html>
