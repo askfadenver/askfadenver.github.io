@@ -1,55 +1,261 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ask FA Denver | Insurance Made Simple</title>
 <meta name="description" content="Ask FA Denver — practical financial education about insurance and financial protection.">
+<meta property="og:title" content="Ask FA Denver | Insurance Made Simple">
+<meta property="og:description" content="Understand your options, ask better questions, and make informed decisions about protecting what matters.">
 <style>
-:root{--n:#123b5d;--n2:#092c47;--g:#f6c542;--cream:#fffaf0;--ink:#183247;--muted:#64798a;--line:#e4ebf0}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}a{text-decoration:none}.c{width:min(1120px,92%);margin:auto}
-nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:22px;font-weight:900;color:var(--n)}.logo b{color:#d39b00}.nav a{background:var(--n);color:#fff;border-radius:999px;padding:11px 18px;font-weight:900}
-.hero{background:linear-gradient(125deg,var(--n2),var(--n));color:#fff}.hg{display:grid;grid-template-columns:1.05fr .95fr;min-height:650px;align-items:center}.copy{padding:60px 0}.ey{display:inline-block;color:#ffe18a;border:1px solid #b99a3b;background:#ffffff18;border-radius:999px;padding:7px 14px;font-weight:900;font-size:13px}.hero h1{font-size:clamp(43px,6vw,70px);line-height:1;letter-spacing:-3px;margin:20px 0}.hero h1 span{color:var(--g)}.hero p{font-size:19px;color:#d8e5ee}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.btn{display:inline-flex;justify-content:center;align-items:center;border-radius:10px;padding:15px 22px;font-weight:900;font-size:15px}.primary{background:var(--g);color:#173149}.secondary{border:1px solid #ffffff80;color:#fff}.photoarea{height:100%;min-height:650px;display:flex;align-items:end;justify-content:center}.photo{height:min(650px,90vw);max-width:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 22px 30px #0005)}
-.form{background:#fff;color:var(--ink);border-radius:20px;padding:24px;box-shadow:0 20px 55px #0004;max-width:620px}.form h3{font-size:24px;line-height:1.15;margin:0 0 5px}.form p{font-size:14px;color:var(--muted);margin:0 0 12px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}input,select{width:100%;padding:13px;border:1px solid #d7e1e8;border-radius:9px;font-size:15px}.full{grid-column:1/-1}.form button{width:100%;border:0;cursor:pointer;margin-top:10px}.success{display:none;background:#e8f7ef;color:#17613d;padding:10px;border-radius:8px;margin-top:9px;font-size:13px}
-section{padding:74px 0}.center{text-align:center}.eyed{color:#a87900;font-weight:900;text-transform:uppercase;letter-spacing:1.5px;font-size:12px}h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-1px;margin:8px 0 14px}.lead{color:var(--muted);font-size:18px;max-width:760px;margin:0 auto 36px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:24px;border:1px solid var(--line);border-radius:16px;box-shadow:0 7px 24px #123b5d0f}.icon{font-size:29px}.card h3{margin:7px 0 4px}.card p{color:var(--muted);margin:0;font-size:15px}
-.dark{background:var(--n2);color:#fff}.dark .lead{color:#c9d8e2}.steps{display:grid;gap:13px;max-width:900px;margin:auto}.step{display:grid;grid-template-columns:50px 1fr;gap:16px;padding:18px;border:1px solid #ffffff22;border-radius:14px;background:#ffffff0a}.num{width:42px;height:42px;border-radius:50%;background:var(--g);color:var(--n);display:flex;align-items:center;justify-content:center;font-weight:900}.step h3{margin:0 0 3px}.step p{margin:0;color:#c9d8e2}.framework{background:#f7fafc}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.flowitem{background:#fff;border:1px solid var(--line);border-radius:13px;padding:20px;text-align:center;font-weight:900}.flowitem span{display:block;font-size:28px}
-.about{display:grid;grid-template-columns:350px 1fr;gap:50px;align-items:center;max-width:950px}.aboutphoto{width:100%;height:440px;object-fit:contain;object-position:center bottom;background:linear-gradient(145deg,#fff8dc,#f7fafc);border-radius:22px}.quote{background:var(--cream);border-left:5px solid var(--g);padding:20px 23px;border-radius:10px;margin-top:20px}.faq{max-width:850px}.faq details{border-bottom:1px solid var(--line);padding:17px 0}.faq summary{font-weight:900;cursor:pointer}.faq p{color:var(--muted)}.cta{background:linear-gradient(135deg,#fff0ae,#fffaf0)}footer{background:#071f31;color:#b8c8d3;padding:28px 0;font-size:12px}footer strong{color:#fff}
-@media(max-width:850px){.hg,.about{grid-template-columns:1fr}.copy{padding:48px 0 15px}.photoarea{min-height:420px}.photo{height:470px}.cards{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.fields{grid-template-columns:1fr}.full{grid-column:auto}}
-@media(max-width:520px){.cards,.flow{grid-template-columns:1fr}.hero h1{letter-spacing:-1.8px}.photoarea{min-height:390px}}
-</style></head>
+:root{
+  --navy:#123b5d;--navy2:#092c47;--gold:#f6c542;--gold2:#d39b00;
+  --cream:#fffaf0;--ink:#183247;--muted:#64798a;--line:#e4ebf0;--white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+a{text-decoration:none}
+.c{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-size:22px;font-weight:900;color:var(--navy);letter-spacing:.2px}
+.logo b{color:var(--gold2)}
+.navlinks{display:flex;align-items:center;gap:10px}
+.navlinks a{font-size:13px;font-weight:900;color:var(--navy)}
+.navcta{background:var(--navy);color:#fff!important;border-radius:999px;padding:10px 17px}
+
+.hero{background:linear-gradient(125deg,var(--navy2),var(--navy));color:#fff}
+.hg{display:grid;grid-template-columns:1.02fr .98fr;min-height:690px;align-items:center;gap:30px}
+.copy{padding:64px 0}
+.ey{display:inline-block;color:#ffe18a;border:1px solid #b99a3b;background:#ffffff18;border-radius:999px;padding:7px 14px;font-weight:900;font-size:13px}
+.hero h1{font-size:clamp(43px,6vw,70px);line-height:1;letter-spacing:-3px;margin:20px 0}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:19px;color:#d8e5ee;max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
+.btn{display:inline-flex;justify-content:center;align-items:center;border-radius:10px;padding:15px 22px;font-weight:900;font-size:15px}
+.primary{background:var(--gold);color:#173149}
+.secondary{border:1px solid #ffffff80;color:#fff}
+.hero-card{margin-top:24px;background:#fff;color:var(--ink);border-radius:20px;padding:24px;box-shadow:0 20px 55px #0004;max-width:650px}
+.hero-card h3{font-size:25px;line-height:1.15;margin:0 0 5px}
+.hero-card p{font-size:14px;color:var(--muted);margin:0 0 13px}
+.privacy{font-size:12px!important;margin-top:12px!important}
+.form-embed{width:100%;height:720px;border:0;border-radius:14px;background:#fff;display:block}
+.form-note{font-size:12px!important;color:var(--muted)!important;margin-top:10px!important}
+.photoarea{height:100%;min-height:690px;display:flex;align-items:center;justify-content:center;padding:35px 0}
+.photo-frame{width:min(470px,100%);height:610px;border-radius:28px;overflow:hidden;background:linear-gradient(145deg,#fff8dc,#f7fafc);display:flex;align-items:flex-end;justify-content:center;box-shadow:0 25px 60px #0004}
+.photo{width:100%;height:100%;object-fit:contain;object-position:center bottom;display:block}
+
+section{padding:74px 0}
+.center{text-align:center}
+.eyed{color:#a87900;font-weight:900;text-transform:uppercase;letter-spacing:1.5px;font-size:12px}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-1px;margin:8px 0 14px}
+.lead{color:var(--muted);font-size:18px;max-width:760px;margin:0 auto 36px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:24px;border:1px solid var(--line);border-radius:16px;box-shadow:0 7px 24px #123b5d0f}
+.icon{font-size:29px}
+.card h3{margin:7px 0 4px}
+.card p{color:var(--muted);margin:0;font-size:15px}
+
+.dark{background:var(--navy2);color:#fff}
+.dark .lead{color:#c9d8e2}
+.steps{display:grid;gap:13px;max-width:900px;margin:auto}
+.step{display:grid;grid-template-columns:50px 1fr;gap:16px;padding:18px;border:1px solid #ffffff22;border-radius:14px;background:#ffffff0a}
+.num{width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:900}
+.step h3{margin:0 0 3px}
+.step p{margin:0;color:#c9d8e2}
+.framework{background:#f7fafc}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.flowitem{background:#fff;border:1px solid var(--line);border-radius:13px;padding:20px;text-align:center;font-weight:900}
+.flowitem span{display:block;font-size:28px}
+
+.about{display:grid;grid-template-columns:390px 1fr;gap:50px;align-items:center;max-width:1000px}
+.about-photo-frame{width:100%;height:470px;border-radius:24px;overflow:hidden;background:linear-gradient(145deg,#fff8dc,#f7fafc);display:flex;align-items:flex-end;justify-content:center}
+.aboutphoto{width:100%;height:100%;object-fit:contain;object-position:center bottom;display:block}
+.quote{background:var(--cream);border-left:5px solid var(--gold);padding:20px 23px;border-radius:10px;margin-top:20px}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.social{display:inline-flex;align-items:center;gap:7px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;color:var(--navy);font-weight:900;font-size:13px;background:#fff}
+.social:hover{border-color:var(--gold2);transform:translateY(-1px)}
+.faq{max-width:850px}
+.faq details{border-bottom:1px solid var(--line);padding:17px 0}
+.faq summary{font-weight:900;cursor:pointer}
+.faq p{color:var(--muted)}
+.cta{background:linear-gradient(135deg,#fff0ae,#fffaf0)}
+footer{background:#071f31;color:#b8c8d3;padding:28px 0;font-size:12px}
+footer strong{color:#fff}
+.footer-socials{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
+.footer-socials a{color:#fff;text-decoration:underline}
+
+@media(max-width:900px){
+  .hg,.about{grid-template-columns:1fr}
+  .copy{padding:48px 0 20px}
+  .photoarea{min-height:500px;padding:20px 0 55px}
+  .photo-frame{height:500px}
+  .cards{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .about{max-width:700px}
+}
+@media(max-width:600px){
+  .navlinks a:not(.navcta){display:none}
+  .hero h1{letter-spacing:-1.8px}
+  .cards,.flow{grid-template-columns:1fr}
+  .photoarea{min-height:410px}
+  .photo-frame{height:420px;border-radius:22px}
+  .about-photo-frame{height:420px}
+  .hero-card{padding:18px}
+  .form-embed{height:760px}
+}
+</style>
+</head>
 <body>
-<nav><div class="c nav"><div class="logo">ASK FA <b>DENVER</b></div><a href="https://docs.google.com/forms/d/e/1FAIpQLSddxLRrazGHP-x3aZts2-Ygo9SG_XSE00MRNKHHqhPycxk1lg/viewform?usp=header" target="_blank" rel="noopener">FREE GUIDE</a></div></nav>
-<section class="hero"><div class="c hg"><div class="copy">
-<span class="ey">FREE FINANCIAL EDUCATION</span>
-<h1>Insurance Made <span>Simple.</span><br>Protection Made Personal.</h1>
-<p><strong>Hindi mo kailangang maging financial expert.</strong><br>Understand your options, ask better questions, and make informed decisions about protecting what matters.</p>
-<div class="actions"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSddxLRrazGHP-x3aZts2-Ygo9SG_XSE00MRNKHHqhPycxk1lg/viewform?usp=header" target="_blank" rel="noopener">GET YOUR FREE GUIDE →</a><a class="btn secondary" href="#about">MEET DENVER</a></div>
-<div class="form" id="register">
-<h3>Get Your Free Financial Guide</h3>
-<p>Tell me what you want to understand. Your request will open the official Ask FA Denver registration form.</p>
-<a class="btn primary" style="width:100%" href="https://docs.google.com/forms/d/e/1FAIpQLSddxLRrazGHP-x3aZts2-Ygo9SG_XSE00MRNKHHqhPycxk1lg/viewform?usp=header" target="_blank" rel="noopener">OPEN REGISTRATION FORM →</a>
-<p style="font-size:12px!important;margin-top:12px">Your details are collected through Google Forms and can be connected to a Google Sheet for lead tracking.</p>
-</div><div class="photoarea"><img class="photo" src="denver.png" alt="Denver Bautista, Licensed Financial Advisor"></div></div></section>
 
-<section><div class="c center"><div class="eyed">NO MORE GUESSING</div><h2>Does this sound familiar?</h2><p class="lead">You want protection, but you're not sure where to start or what you actually need.</p><div class="cards">
-<div class="card"><div class="icon">🤔</div><h3>“May insurance na ako.”</h3><p>But do you know what it actually covers?</p></div><div class="card"><div class="icon">💭</div><h3>“Gusto ko kumuha.”</h3><p>But there are too many plans and terms.</p></div><div class="card"><div class="icon">💸</div><h3>“Baka hindi ko afford.”</h3><p>Learn how to think about protection within your priorities.</p></div>
-</div></div></section>
+<nav>
+  <div class="c nav">
+    <div class="logo">ASK FA <b>DENVER</b></div>
+    <div class="navlinks">
+      <a href="#about">ABOUT</a>
+      <a href="#connect">CONNECT</a>
+      <a class="navcta" href="#register">FREE GUIDE</a>
+    </div>
+  </div>
+</nav>
 
-<section class="dark"><div class="c"><div class="center"><div class="ey" style="color:#ffe18a">WHAT YOU'LL LEARN</div><h2>5 Things to Understand Before Getting Insurance</h2><p class="lead">Simple concepts for reviewing an existing policy or considering a new one.</p></div><div class="steps">
-<div class="step"><div class="num">1</div><div><h3>How much protection may be appropriate</h3><p>Consider income, dependents, debts, goals and responsibilities.</p></div></div>
-<div class="step"><div class="num">2</div><div><h3>Life, health, critical illness and HMO</h3><p>Understand what each is designed to address.</p></div></div>
-<div class="step"><div class="num">3</div><div><h3>Guaranteed benefits vs. market-linked values</h3><p>Understand why these should not be treated as the same.</p></div></div>
-<div class="step"><div class="num">4</div><div><h3>Questions to ask before signing</h3><p>Clarify benefits, exclusions, charges, payment period and conditions.</p></div></div>
-<div class="step"><div class="num">5</div><div><h3>How to review what you already have</h3><p>Use a simple checklist to understand your existing protection.</p></div></div>
-</div></div></section>
+<section class="hero">
+  <div class="c hg">
+    <div class="copy">
+      <span class="ey">FREE FINANCIAL EDUCATION</span>
+      <h1>Insurance Made <span>Simple.</span><br>Protection Made Personal.</h1>
+      <p><strong>Hindi mo kailangang maging financial expert.</strong><br>
+      Understand your options, ask better questions, and make informed decisions about protecting what matters.</p>
 
-<section class="framework"><div class="c center"><div class="eyed">ASK FA DENVER FRAMEWORK</div><h2>Build Your Financial Safety Net</h2><p class="lead">Different tools can serve different purposes. Start with the foundation, then build around your goals.</p><div class="flow">
-<div class="flowitem"><span>🏥</span>PhilHealth</div><div class="flowitem"><span>🩺</span>HMO</div><div class="flowitem"><span>💵</span>Emergency Fund</div><div class="flowitem"><span>🛡️</span>Insurance & Investments</div></div></div></section>
+      <div class="actions">
+        <a class="btn primary" href="#register">GET YOUR FREE GUIDE →</a>
+        <a class="btn secondary" href="#about">MEET DENVER</a>
+      </div>
 
-<section id="about"><div class="c about"><img class="aboutphoto" src="denver.png" alt="Denver Bautista"><div><div class="eyed">YOUR FINANCIAL GUIDE</div><h2>Meet Denver Bautista</h2><p><strong>Licensed Financial Advisor</strong></p><p style="color:var(--muted)">Ask FA Denver is built around a simple approach: <strong>education first, decision second.</strong> The goal is to make financial protection easier to understand so you can ask the right questions and decide based on your own needs and priorities.</p><div class="quote"><strong>“Hindi kailangan ng sales talk. Kailangan mo munang maintindihan.”</strong></div><p><strong>📱 0945 166 9120</strong></p></div></div></section>
+      <div class="hero-card" id="register">
+        <h3>Get Your Free Financial Guide</h3>
+        <p>Tell me what you want to understand, and I'll help you start with the information that's relevant to you.</p>
 
-<section><div class="c faq"><div class="center"><div class="eyed">FAQ</div><h2>Questions before you start?</h2></div><details><summary>Do I need to buy insurance after the consultation?</summary><p>No. Any purchase decision is yours.</p></details><details><summary>Can you review my existing policy?</summary><p>Yes. Bring your policy details and questions for an educational review.</p></details><details><summary>Is HMO the same as life insurance?</summary><p>No. They are designed for different purposes and actual benefits depend on the specific plan.</p></details></div></section>
+        <iframe
+          class="form-embed"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSddxLRrazGHP-x3aZts2-Ygo9SG_XSE00MRNKHHqhPycxk1lg/viewform?embedded=true"
+          title="Ask FA Denver registration form"
+          loading="lazy">
+        </iframe>
 
-<section class="cta"><div class="c center"><div class="eyed">START HERE</div><h2>Let's make insurance easier to understand.</h2><p class="lead">Get the guide, bring your questions, and start with an informed conversation.</p><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSddxLRrazGHP-x3aZts2-Ygo9SG_XSE00MRNKHHqhPycxk1lg/viewform?usp=header" target="_blank" rel="noopener">GET YOUR FREE GUIDE →</a></div></section>
-<footer><div class="c"><strong>ASK FA DENVER</strong><br>Denver Bautista • Licensed Financial Advisor • 0945 166 9120<br><br>This website is for educational and lead-generation purposes. It is not an official website of Sun Life Financial. Product availability, benefits, guarantees and policy terms are subject to the applicable insurer's official documents, underwriting and terms.</div></footer>
+        <p class="privacy">🔒 <strong>Privacy:</strong> Your information will be used to respond to your inquiry and provide the information you've requested.</p>
+        <p class="form-note">Your response is securely collected through Google Forms and can be recorded in Google Sheets for lead management.</p>
+      </div>
+    </div>
 
-</body></html>
+    <div class="photoarea">
+      <div class="photo-frame">
+        <img class="photo" src="denver.png" alt="Denver Bautista, Licensed Financial Advisor">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="c center">
+    <div class="eyed">NO MORE GUESSING</div>
+    <h2>Does this sound familiar?</h2>
+    <p class="lead">You want protection, but you're not sure where to start or what you actually need.</p>
+    <div class="cards">
+      <div class="card"><div class="icon">🤔</div><h3>“May insurance na ako.”</h3><p>But do you know what it actually covers?</p></div>
+      <div class="card"><div class="icon">💭</div><h3>“Gusto ko kumuha.”</h3><p>But there are too many plans and terms.</p></div>
+      <div class="card"><div class="icon">💸</div><h3>“Baka hindi ko afford.”</h3><p>Learn how to think about protection within your priorities.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="c">
+    <div class="center">
+      <div class="ey">WHAT YOU'LL LEARN</div>
+      <h2>5 Things to Understand Before Getting Insurance</h2>
+      <p class="lead">Simple concepts for reviewing an existing policy or considering a new one.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h3>How much protection may be appropriate</h3><p>Consider income, dependents, debts, goals and responsibilities.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>Life, health, critical illness and HMO</h3><p>Understand what each is designed to address.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>Guaranteed benefits vs. market-linked values</h3><p>Understand why these should not be treated as the same.</p></div></div>
+      <div class="step"><div class="num">4</div><div><h3>Questions to ask before signing</h3><p>Clarify benefits, exclusions, charges, payment period and conditions.</p></div></div>
+      <div class="step"><div class="num">5</div><div><h3>How to review what you already have</h3><p>Use a simple checklist to understand your existing protection.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="framework">
+  <div class="c center">
+    <div class="eyed">ASK FA DENVER FRAMEWORK</div>
+    <h2>Build Your Financial Safety Net</h2>
+    <p class="lead">Different tools can serve different purposes. Start with the foundation, then build around your goals.</p>
+    <div class="flow">
+      <div class="flowitem"><span>🏥</span>PhilHealth</div>
+      <div class="flowitem"><span>🩺</span>HMO</div>
+      <div class="flowitem"><span>💵</span>Emergency Fund</div>
+      <div class="flowitem"><span>🛡️</span>Insurance & Investments</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="c about">
+    <div class="about-photo-frame">
+      <img class="aboutphoto" src="denver.png" alt="Denver Bautista, Licensed Financial Advisor">
+    </div>
+    <div>
+      <div class="eyed">YOUR FINANCIAL GUIDE</div>
+      <h2>Meet Denver Bautista</h2>
+      <p><strong>Licensed Financial Advisor</strong></p>
+      <p style="color:var(--muted)">Ask FA Denver is built around a simple approach: <strong>education first, decision second.</strong> The goal is to make financial protection easier to understand so you can ask the right questions and decide based on your own needs and priorities.</p>
+      <div class="quote"><strong>“Hindi kailangan ng sales talk. Kailangan mo munang maintindihan.”</strong></div>
+      <p><strong>📱 0945 166 9120</strong></p>
+      <div class="socials" id="connect">
+        <a class="social" href="https://www.facebook.com/askFAdenver/" target="_blank" rel="noopener">Facebook</a>
+        <a class="social" href="https://www.instagram.com/askfadenver/" target="_blank" rel="noopener">Instagram</a>
+        <a class="social" href="https://www.linkedin.com/in/denverbautista/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="c faq">
+    <div class="center">
+      <div class="eyed">FAQ</div>
+      <h2>Questions before you start?</h2>
+    </div>
+    <details><summary>Do I need to buy insurance after the consultation?</summary><p>No. Any purchase decision is yours.</p></details>
+    <details><summary>Can you review my existing policy?</summary><p>Yes. Bring your policy details and questions for an educational review.</p></details>
+    <details><summary>Is HMO the same as life insurance?</summary><p>No. They are designed for different purposes and actual benefits depend on the specific plan.</p></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="c center">
+    <div class="eyed">START HERE</div>
+    <h2>Let's make insurance easier to understand.</h2>
+    <p class="lead">Tell me what you're trying to protect. Let's start there.</p>
+    <a class="btn primary" href="#register">GET MY FREE GUIDE →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <strong>ASK FA DENVER</strong><br>
+    Denver Bautista • Licensed Financial Advisor • 0945 166 9120
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/askFAdenver/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/askfadenver/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/denverbautista/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <br>
+    This website is for educational and lead-generation purposes. It is not an official website of Sun Life Financial. Product availability, benefits, guarantees and policy terms are subject to the applicable insurer's official documents, underwriting and terms.
+  </div>
+</footer>
+
+</body>
+</html>
