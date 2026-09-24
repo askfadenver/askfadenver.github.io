@@ -142,8 +142,8 @@ nav{
 .form-status{min-height:22px;margin-top:12px;font-size:13px;font-weight:700;line-height:1.45;color:#1f6b4b}.hidden-frame{position:absolute;width:1px;height:1px;border:0;opacity:0;pointer-events:none}
 
 .photoarea{grid-area:photo;min-height:100%;display:flex;align-items:stretch;justify-content:center;padding:40px 0 56px}
-.photo-frame{width:100%;min-height:720px;border-radius:30px;overflow:hidden;background:linear-gradient(145deg,#fff8dc,#f7fafc);display:flex;align-items:stretch;justify-content:center;box-shadow:0 20px 50px rgba(0,0,0,.20)}
-.photo{width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block}
+.photo-frame{position:relative;width:100%;min-height:720px;border-radius:30px;overflow:hidden;background:linear-gradient(145deg,#fff8dc,#f7fafc);box-shadow:0 20px 50px rgba(0,0,0,.20)}
+.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block}
 
 /* GLOBAL SECTIONS */
 section{padding:88px 0}
@@ -268,7 +268,7 @@ footer strong{color:#fff;letter-spacing:.4px}
 .footer-socials a{color:#fff;text-decoration:underline}
 
 /* TABLET */
-@media(max-width:900px){.form-grid{grid-template-columns:1fr}.field-full{grid-column:auto}.photo-frame{min-height:520px;aspect-ratio:1/1;border-radius:24px}.photo{object-position:center 28%}}
+@media(max-width:900px){.form-grid{grid-template-columns:1fr}.field-full{grid-column:auto}.photo-frame{min-height:520px;aspect-ratio:1/1;border-radius:24px}.photo{object-position:center 24%}}
 
 @media(max-width:1024px){
   .c{width:min(920px,calc(100% - 42px))}
@@ -301,7 +301,7 @@ footer strong{color:#fff;letter-spacing:.4px}
   .hero p{font-size:17px;line-height:1.65;max-width:620px}
   .actions{margin-top:23px}
   .photoarea{min-height:0;padding:22px 0 38px}
-  .photo-frame{width:min(390px,100%);aspect-ratio:1/1;border-radius:26px}
+  .photo-frame{width:min(430px,100%);aspect-ratio:4/5;border-radius:26px}
   .hero-card{margin:0 0 54px;padding:23px;border-radius:18px;max-width:none}
   .hero-card h3{font-size:22px}
   .form-embed{height:720px}
@@ -336,7 +336,7 @@ footer strong{color:#fff;letter-spacing:.4px}
   .btn{width:100%;min-height:47px;padding:12px 16px;font-size:13px}
 
   .photoarea{padding:15px 0 31px}
-  .photo-frame{width:min(340px,100%);border-radius:22px}
+  .photo-frame{width:100%;aspect-ratio:4/5;border-radius:22px}
 
   .hero-card{padding:18px;margin-bottom:42px;border-radius:16px}
   .hero-card h3{font-size:20px}
@@ -387,7 +387,7 @@ footer strong{color:#fff;letter-spacing:.4px}
   .logo{font-size:17px}
   .navcta{padding-inline:13px!important}
   .hero h1{font-size:35px}
-  .photo-frame{width:100%}
+  .photo-frame{width:100%;aspect-ratio:4/5}
   .flow{grid-template-columns:1fr}
   .flowitem:last-child{grid-column:span 1}
 }
@@ -561,7 +561,7 @@ footer strong{color:#fff;letter-spacing:.4px}
           <span>Instagram</span>
         </a>
         <a class="social" href="https://www.linkedin.com/in/denverbautista/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8H2V21H5V8ZM3.5 3A2 2 0 1 0 3.5 7A2 2 0 0 0 3.5 3ZM9 8H6V21H9V14.2C9 10.4 14 10.1 14 14.2V21H17V13.2C17 7.1 10.2 7.3 9 10.4V8ZM19 8H16V21H19V14.7C19 11.1 24 10.8 24 14.7V21H27V13.3C27 7.2 20.2 7.3 19 10.3V8Z" transform="translate(-1.5 0)"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H9.33V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.28 2.38 4.28 5.48v6.27zM5.32 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.1 20.45H3.54V8.99H7.1v11.46z"/></svg>
           <span>LinkedIn</span>
         </a>
       </div>
@@ -600,7 +600,7 @@ footer strong{color:#fff;letter-spacing:.4px}
       <a href="https://www.linkedin.com/in/denverbautista/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <br>
-    This website is for educational and lead-generation purposes. It is not an official website of Sun Life Financial. Product availability, benefits, guarantees and policy terms are subject to the applicable insurer's official documents, underwriting and terms.
+    This website is for educational and lead-generation purposes. Product availability, benefits, guarantees and policy terms are subject to the applicable provider's official documents and terms.
   </div>
 </footer>
 
