@@ -391,8 +391,14 @@ footer strong{color:#fff;letter-spacing:.4px}
   .flow{grid-template-columns:1fr}
   .flowitem:last-child{grid-column:span 1}
 }
+
+/* V16: text-first homepage — no personal photos or image assets */
+.hg{grid-template-columns:1fr;max-width:980px;margin-inline:auto}
+.hg .copy{width:100%;max-width:920px;margin-inline:auto}
+.about{grid-template-columns:1fr;max-width:900px;margin-inline:auto;gap:0}
+.about > div:last-child{max-width:900px}
+@media(max-width:900px){.hg{grid-template-columns:1fr}.hg .copy{max-width:100%}.about{grid-template-columns:1fr}}
 </style>
-<link rel="preload" as="image" href="denver.webp">
 </head>
 <body>
 
@@ -467,11 +473,6 @@ footer strong{color:#fff;letter-spacing:.4px}
       </div>
     </div>
 
-    <div class="photoarea">
-      <div class="photo-frame">
-        <img class="photo" src="denver.webp" alt="Denver Bautista, Licensed Financial Advisor">
-      </div>
-    </div>
   </div>
 </section>
 
@@ -541,9 +542,6 @@ footer strong{color:#fff;letter-spacing:.4px}
 
 <section id="about">
   <div class="c about">
-    <div class="about-photo-frame">
-      <img class="aboutphoto" src="denver.webp" alt="Denver Bautista, Licensed Financial Advisor">
-    </div>
     <div>
       <div class="eyed">YOUR FINANCIAL GUIDE</div>
       <h2>Denver Bautista</h2>
