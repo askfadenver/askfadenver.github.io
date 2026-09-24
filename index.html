@@ -131,20 +131,19 @@ nav{
 .privacy{font-size:12px!important;line-height:1.5!important;margin-top:12px!important}
 .form-embed{width:100%;height:720px;border:0;border-radius:14px;background:#fff;display:block}
 .form-note{font-size:12px!important;line-height:1.5!important;color:#7a8b98!important;margin-top:10px!important}
+.lead-form{margin-top:20px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{min-width:0}.field-full{grid-column:1/-1}
+.field label{display:block;font-size:12px;font-weight:800;color:var(--navy);margin:0 0 7px;letter-spacing:.25px}.field label span{color:#b38300}
+.field input,.field select,.field textarea{width:100%;border:1px solid #dbe4eb;background:#fbfdff;color:var(--ink);border-radius:12px;padding:13px 14px;outline:none;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}
+.field input,.field select{min-height:50px}.field textarea{resize:vertical;min-height:112px;line-height:1.55}
+.field input::placeholder,.field textarea::placeholder{color:#94a3af}.field input:focus,.field select:focus,.field textarea:focus{border-color:#8aa7bb;background:#fff;box-shadow:0 0 0 3px rgba(18,59,93,.08)}
+.form-submit{width:100%;margin-top:18px;border:0;cursor:pointer}.form-submit span{margin-left:8px}
+.form-status{min-height:22px;margin-top:12px;font-size:13px;font-weight:700;line-height:1.45;color:#1f6b4b}.hidden-frame{position:absolute;width:1px;height:1px;border:0;opacity:0;pointer-events:none}
 
-.photoarea{grid-area:photo;min-height:100%;display:flex;align-items:center;justify-content:center;padding:54px 0 70px}
-.photo-frame{
-  width:min(500px,100%);
-  aspect-ratio:1/1;
-  border-radius:30px;
-  overflow:hidden;
-  background:linear-gradient(145deg,#fff8dc,#f7fafc);
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  box-shadow:0 20px 50px rgba(0,0,0,.20);
-}
-.photo{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.photoarea{grid-area:photo;min-height:100%;display:flex;align-items:stretch;justify-content:center;padding:40px 0 56px}
+.photo-frame{width:100%;min-height:720px;border-radius:30px;overflow:hidden;background:linear-gradient(145deg,#fff8dc,#f7fafc);display:flex;align-items:stretch;justify-content:center;box-shadow:0 20px 50px rgba(0,0,0,.20)}
+.photo{width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block}
 
 /* GLOBAL SECTIONS */
 section{padding:88px 0}
@@ -269,6 +268,8 @@ footer strong{color:#fff;letter-spacing:.4px}
 .footer-socials a{color:#fff;text-decoration:underline}
 
 /* TABLET */
+@media(max-width:900px){.form-grid{grid-template-columns:1fr}.field-full{grid-column:auto}.photo-frame{min-height:520px;aspect-ratio:1/1;border-radius:24px}.photo{object-position:center 28%}}
+
 @media(max-width:1024px){
   .c{width:min(920px,calc(100% - 42px))}
   .hg{grid-template-columns:minmax(0,1fr) minmax(300px,.82fr);column-gap:34px}
@@ -423,15 +424,46 @@ footer strong{color:#fff;letter-spacing:.4px}
         <h3>Get Your Free Financial Guide</h3>
         <p>Tell me what you want to understand, and I'll help you start with the information that's relevant to you.</p>
 
-        <iframe
-          class="form-embed"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSddxLRrazGHP-x3aZts2-Ygo9SG_XSE00MRNKHHqhPycxk1lg/viewform?embedded=true"
-          title="Ask FA Denver registration form"
-          loading="lazy">
-        </iframe>
+        <form class="lead-form" id="leadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSddxLRrazGHP-x3aZts2-Ygo9SG_XSE00MRNKHHqhPycxk1lg/formResponse" method="POST" target="googleFormFrame">
+          <div class="form-grid">
+            <div class="field field-full">
+              <label for="fullName">Full Name <span>*</span></label>
+              <input id="fullName" name="entry.1619247918" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="mobile">Mobile Number <span>*</span></label>
+              <input id="mobile" name="entry.422687933" type="tel" inputmode="tel" placeholder="09XX XXX XXXX" autocomplete="tel" required>
+            </div>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input id="email" name="entry.565509801" type="email" placeholder="you@email.com" autocomplete="email">
+            </div>
+            <div class="field field-full">
+              <label for="interest">What would you like to learn about? <span>*</span></label>
+              <select id="interest" name="entry.1887925097" required>
+                <option value="" selected disabled>Choose a topic</option>
+                <option>Financial Planning</option>
+                <option>Life Insurance</option>
+                <option>Critical Illness</option>
+                <option>HMO / Health Protection</option>
+                <option>VUL / Investment-linked Insurance</option>
+                <option>Savings &amp; Emergency Fund</option>
+                <option>Pre-Need Plans / St. Peter</option>
+                <option>I&#39;m not sure — I need guidance</option>
+              </select>
+            </div>
+            <div class="field field-full">
+              <label for="message">What&#39;s on your mind?</label>
+              <textarea id="message" name="entry.928595103" rows="4" placeholder="Tell me what you&#39;re trying to protect, plan, or understand."></textarea>
+            </div>
+          </div>
+          <button class="btn primary form-submit" type="submit">GET MY FREE GUIDE <span>→</span></button>
+          <div class="form-status" id="formStatus" aria-live="polite"></div>
+        </form>
+        <iframe name="googleFormFrame" id="googleFormFrame" class="hidden-frame" title="Google Forms submission" aria-hidden="true"></iframe>
 
-        <p class="privacy">🔒 <strong>Privacy:</strong> Your information will be used to respond to your inquiry and provide the information you've requested.</p>
-        <p class="form-note">Your response is securely collected through Google Forms and can be recorded in Google Sheets for lead management.</p>
+        <p class="privacy">🔒 <strong>Your information stays private.</strong> It is used to respond to your inquiry and provide the information you've requested.</p>
+        <p class="form-note">Securely submitted to the existing Ask FA Denver Google Form and connected Google Sheet.</p>
       </div>
     </div>
 
@@ -574,5 +606,18 @@ footer strong{color:#fff;letter-spacing:.4px}
 
 
 
+<script>
+(function(){
+ const form=document.getElementById('leadForm'), status=document.getElementById('formStatus');
+ if(!form||!status)return;
+ form.addEventListener('submit',function(e){
+   if(!form.checkValidity()){e.preventDefault();form.reportValidity();return;}
+   status.textContent='Thank you! Your details have been submitted. I\'ll be in touch soon.';
+   const b=form.querySelector('button[type="submit"]');
+   if(b){b.disabled=true;b.textContent='SUBMITTED ✓';}
+   setTimeout(function(){form.reset();status.textContent='';if(b){b.disabled=false;b.innerHTML='GET MY FREE GUIDE <span>→</span>'; }},2200);
+ });
+})();
+</script>
 </body>
 </html>
